@@ -189,6 +189,7 @@ header {
   width: 100%;
   z-index: 1024;
   transition: var(--transition);
+  isolation: isolate;
   background-color: var(--headerBackgroundColor);
 }
 header nav {
@@ -229,11 +230,12 @@ header nav .navMenu .navLink {
 @media (max-width: 768px) {
   header nav .navMenu {
     position: fixed;
-    z-index: 999;
+    z-index: -1;
     right: -100%;
-    top: 62px;
+    top: 0px;
     width: 100%;
     height: 100%;
+    padding: 60px 0;
     flex-direction: column;
     justify-content: center;
     background-color: var(--headerBackgroundColor);
@@ -241,6 +243,7 @@ header nav .navMenu .navLink {
   header nav .navMenu .navLink {
     text-align: center;
     justify-content: center;
+    padding: 12px;
   }
 }
 header nav .navMenu.active {
@@ -254,7 +257,7 @@ header nav .navBtn {
   padding: 5px;
   cursor: pointer;
   transition: var(--transition);
-  z-index: 99999;
+  z-index: 2;
 }
 header nav .navBtn span {
   position: absolute;

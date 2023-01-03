@@ -10,7 +10,7 @@
   --transition: all 0.3s ease-in-out;
   --shadow: 0px 2px 4px #c1c1c1;
   --BigShadow: 0px 4px 24px #c1c1c1;
-  --headerBackgroundColor: var(--mainColor10);
+  --headerBackgroundColor: var(--whiteColor);
 }
 
 @font-face {
@@ -188,9 +188,11 @@ header {
   left: 0;
   width: 100%;
   z-index: 1024;
+  margin-bottom: 10px;
   transition: var(--transition);
-  isolation: isolate;
-  background-color: var(--headerBackgroundColor);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  background-color: rgba(255, 255, 255, 0.1882352941);
 }
 header nav {
   width: min(100% - 20px, 1320px);
@@ -234,7 +236,7 @@ header nav .navMenu .navLink {
     right: -100%;
     top: 0px;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     padding: 60px 0;
     flex-direction: column;
     justify-content: center;
@@ -308,10 +310,11 @@ header nav .navBtn.active span:last-child {
     display: none;
   }
 }
-header .headerAnimate {
+
+.headerAnimate {
   box-shadow: var(--BigShadow);
   padding: 5px;
-  background-color: var(--backgroundColor);
+  background-color: var(--whiteColor);
 }
 
 /* PC device :992px. */
@@ -346,57 +349,57 @@ p {
 @media (min-width: 768px) and (max-width: 992px) {
   /* Global */
   body {
-    font-size: 13px;
+    font-size: 14px;
   }
   h1 {
-    font-size: 24px;
+    font-size: 25px;
   }
   h2 {
-    font-size: 20px;
+    font-size: 21px;
   }
   h3 {
-    font-size: 19px;
+    font-size: 20px;
   }
   h4 {
-    font-size: 17px;
+    font-size: 18px;
   }
   h5 {
-    font-size: 15px;
+    font-size: 16px;
   }
   h6 {
-    font-size: 14px;
+    font-size: 15px;
   }
   a,
 p {
-    font-size: 13px;
+    font-size: 14px;
   }
 }
 /* small mobile :320px. */
 @media (max-width: 768px) {
   /* Global */
   body {
-    font-size: 12px;
+    font-size: 13px;
   }
   h1 {
-    font-size: 21px;
+    font-size: 23px;
   }
   h2 {
-    font-size: 17px;
+    font-size: 19px;
   }
   h3 {
-    font-size: 16px;
+    font-size: 18px;
   }
   h4 {
-    font-size: 15px;
+    font-size: 17px;
   }
   h5 {
-    font-size: 14px;
+    font-size: 16px;
   }
   h6 {
-    font-size: 13px;
+    font-size: 14px;
   }
   a,
 p {
-    font-size: 12px;
+    font-size: 13px;
   }
 }/*# sourceMappingURL=style.css.map */

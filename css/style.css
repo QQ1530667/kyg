@@ -239,6 +239,7 @@ header nav .navMenu .navLink.btn {
   border-radius: 8px;
   background-color: var(--mainColor);
   color: var(--whiteColor);
+  padding: 12px 24px;
 }
 @media (max-width: 768px) {
   header nav .navMenu {

@@ -324,6 +324,60 @@ header nav .navBtn.active span:last-child {
   }
 }
 
+footer .copyRight {
+  text-align: center;
+}
+footer .support {
+  position: fixed;
+  left: 10px;
+  bottom: 20px;
+  z-index: 999;
+  background-color: var(--bodyColor);
+  border-radius: 1000px;
+  padding: 5px;
+}
+footer .support .supportBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 50px;
+  min-height: 50px;
+  border-radius: 50%;
+  background-color: var(--mainColor);
+  box-shadow: var(--BigShadow);
+  cursor: pointer;
+  transition: var(--transition);
+}
+footer .support .supportBtn i {
+  font-size: 20px;
+  color: var(--whiteColor);
+}
+footer .support .links {
+  display: none;
+}
+footer .support .links a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 50px;
+  min-height: 50px;
+  border-radius: 50%;
+  background-color: var(--whiteColor);
+  box-shadow: var(--BigShadow);
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+footer .support .links a i {
+  font-size: 24px;
+  color: var(--whiteColor);
+}
+footer .support .links a.whatsapp {
+  background-color: #25d366;
+}
+footer .support .links a.call {
+  background-color: #34b7f1;
+}
+
 .btn {
   padding: 12px 32px;
   border: none;
@@ -417,58 +471,25 @@ header nav .navBtn.active span:last-child {
      object-fit: cover;
 }
 
-footer .copyRight {
+.services {
+  padding: 30px 0;
+}
+.services .title {
   text-align: center;
 }
-footer .support {
-  position: fixed;
-  left: 10px;
-  bottom: 20px;
-  z-index: 999;
-  background-color: var(--bodyColor);
-  border-radius: 1000px;
-  padding: 5px;
+
+.references .swiper-slide {
+  width: auto;
 }
-footer .support .supportBtn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-width: 50px;
-  min-height: 50px;
-  border-radius: 50%;
-  background-color: var(--mainColor);
-  box-shadow: var(--BigShadow);
-  cursor: pointer;
-  transition: var(--transition);
+.references .referenceLogo {
+  height: 100px;
+  padding: 8px;
 }
-footer .support .supportBtn i {
-  font-size: 20px;
-  color: var(--whiteColor);
-}
-footer .support .links {
-  display: none;
-}
-footer .support .links a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-width: 50px;
-  min-height: 50px;
-  border-radius: 50%;
-  background-color: var(--whiteColor);
-  box-shadow: var(--BigShadow);
-  margin-bottom: 10px;
-  cursor: pointer;
-}
-footer .support .links a i {
-  font-size: 24px;
-  color: var(--whiteColor);
-}
-footer .support .links a.whatsapp {
-  background-color: #25d366;
-}
-footer .support .links a.call {
-  background-color: #34b7f1;
+.references .referenceLogo img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 /* PC device :992px. */

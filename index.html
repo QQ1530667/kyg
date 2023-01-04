@@ -17,6 +17,8 @@
   <link rel="stylesheet" href="css/atropos.css">
   <!-- odometer -->
   <link rel="stylesheet" href="css/odometer.min.css" />
+  <!-- Swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
   <!-- Custom style  -->
   <link rel="stylesheet" href="css/style.css" />
 </head>
@@ -49,7 +51,7 @@
   <!--(((((((((((((((((((((((()))))))))))))))))))))))-->
   <content>
     <!-- main Atropos -->
-    <div class="atropos mainAtropos">
+    <section class="atropos mainAtropos">
       <div class="atropos-scale">
         <div class="atropos-rotate">
           <div class="atropos-inner">
@@ -62,11 +64,59 @@
             <h5 data-atropos-offset="5" data-aos="fade-up" data-aos-delay="500">
               أفضل مركز متخصص في صيانة سيارات نيسان
             </h5>
-            <img class="logo" data-atropos-offset="5" src="img/logow.svg" data-aos="fade-up" data-aos-delay="700">
+            <img src="img/logoW.svg" class="logo" data-atropos-offset="5" data-aos="fade-up" data-aos-delay="700">
           </div>
         </div>
       </div>
-    </div>
+    </section>
+
+    <!--  services -->
+    <section class="services">
+      <div class="title">
+        <h1 data-aos="fade-up"> خدماتُنا </h1>
+        <p data-aos="fade-up"> نمتلك خبرة طويلة في مجالنا، ولذلك نستطيع تقديم خدمات متميّزة لك. </p>
+      </div>
+    </section>
+
+
+    <!-- references -->
+    <section class="references">
+      <div class="swiper referencesSlider ">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="referenceLogo ">
+              <img src="img/car1.webp" alt="">
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="referenceLogo ">
+              <img src="img/car2.webp" alt="">
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="referenceLogo ">
+              <img src="img/car3.webp" alt="">
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="referenceLogo ">
+              <img src="img/car4.webp" alt="">
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="referenceLogo ">
+              <img src="img/car5.webp" alt="">
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="referenceLogo ">
+              <img src="img/car6.webp" alt="">
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
 
   </content>
   <!--(((((((((((((((((((((((()))))))))))))))))))))))-->
@@ -78,7 +128,7 @@
     <div class="copyRight">
       كل الحقوق محفوظة
       <a class="company" href="#!" target="_blank">
-        <img src="img/romoz_logo.png" alt="">
+        <img src="img/romoz_logo.webp" alt="">
         Nami
       </a>
       <script>
@@ -252,22 +302,35 @@
   <script src="js/odometer.min.js"></script>
   <!-- custom -->
   <script src="js/custom.js"></script>
-
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  <!-- Initialize Swiper -->
   <script>
-    // 3D Card
-    const myAtropos = Atropos({
-      el: '.atropos',
-      activeOffset: 40,
-      shadowScale: 1.05,
-      rotateXMax: 25,
-      rotateYMax: 25,
-      shadow: true,
-      shadowOffset: 50,
-      shadowScale: .9,
-      highlight: true,
-      onEnter() { },
-      onLeave() { },
-      onRotate(x, y) { }
+    //Categories Slider
+    var referencesSlider = new Swiper(".referencesSlider", {
+      spaceBetween: 12,
+      speed: 1000,
+      loop: true,
+      autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
+      },
+      // slidesPerView: "auto",
+      breakpoints: {
+        0: {
+          slidesPerView: 2,
+        },
+        340: {
+          slidesPerView: 3,
+        },
+        768: {
+          slidesPerView: 4,
+        },
+        991: {
+          slidesPerView: 5,
+        },
+      },
+
     });
   </script>
 </body>

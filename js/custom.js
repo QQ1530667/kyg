@@ -13,6 +13,10 @@ $(document).ready(function () {
       $("header").removeClass("headerAnimate");
     }
   });
+  // support Btn
+  $(".supportBtn").click(function () {
+    $(".links").slideToggle(300);
+  });
 });
 // ////////////////////////////////////////
 // ////////////////////////////////////////

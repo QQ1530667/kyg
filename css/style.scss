@@ -155,10 +155,9 @@ content {
   flex-direction: column;
   gap: 24px;
   min-height: calc(100vh - 80px);
-  
 }
 header {
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   width: 100%;
@@ -190,12 +189,22 @@ header {
       display: flex;
       width: 100%;
       justify-content: end;
-      gap: 4px;
+      gap: 6px;
       transition: var(--transition);
       .navLink {
         padding: 4px 12px;
         display: flex;
         align-items: center;
+        color: var(--blackColor);
+        &:hover {
+          color: var(--mainColor);
+        }
+        &.btn {
+          border: 1px solid var(--mainColor);
+          border-radius: 8px;
+          background-color: var(--mainColor);
+          color: var(--whiteColor);
+        }
       }
       @media (max-width: 768px) {
         position: fixed;
@@ -208,12 +217,14 @@ header {
         flex-direction: column;
         justify-content: center;
         background-color: var(--headerBackgroundColor);
+        align-items: center;
         .navLink {
           text-align: center;
           justify-content: center;
           padding: 12px;
         }
       }
+
       &.active {
         right: 0;
       }
@@ -283,6 +294,105 @@ header {
   box-shadow: var(--BigShadow);
   padding: 5px;
   background-color: var(--whiteColor);
+}
+
+.mainSection {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  background-size: cover !important;
+  background-position: center center !important;
+  height: 490px;
+  border-radius: 0 0 8px 8px;
+  margin-bottom: 50px;
+  color: var(--whiteColor);
+  gap: 12px;
+
+  h1 {
+    font-weight: bold;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 38px !important;
+    // text-shadow: -2px 3px 0px var(--mainColor30);
+    @media (max-width: 768px) {
+      font-size: 24px !important;
+    }
+  }
+  h5{
+    font-weight: normal;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    z-index: -1;
+    background-color: #ad2b3290;
+    width: 95%;
+    height: 200px;
+    border-radius: 100%;
+    transform: translateX(-50%);
+  }
+}
+
+footer {
+  .copyRight {
+    text-align: center;
+  }
+  .support {
+    position: fixed;
+    left: 10px;
+    bottom: 20px;
+    z-index: 999;
+    background-color: var(--bodyColor);
+    border-radius: 1000px;
+    padding: 5px;
+    .supportBtn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-width: 50px;
+      min-height: 50px;
+      border-radius: 50%;
+      background-color: var(--mainColor);
+      box-shadow: var(--BigShadow);
+      cursor: pointer;
+      transition: var(--transition);
+      i {
+        font-size: 20px;
+        color: var(--whiteColor);
+      }
+    }
+    .links {
+      display: none;
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 50px;
+        min-height: 50px;
+        border-radius: 50%;
+        background-color: var(--whiteColor);
+        box-shadow: var(--BigShadow);
+        margin-bottom: 10px;
+        cursor: pointer;
+        i {
+          font-size: 24px;
+          color: var(--whiteColor);
+        }
+        &.whatsapp {
+          background-color: #25d366;
+        }
+        &.call {
+          background-color: #34b7f1;
+        }
+      }
+    }
+  }
 }
 // //////////////////////////////////////////==================
 // //////////////////////////////////////////==================

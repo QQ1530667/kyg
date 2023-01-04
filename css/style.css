@@ -189,7 +189,7 @@ header {
   left: 0;
   width: 100%;
   z-index: 1024;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   transition: var(--transition);
   -webkit-backdrop-filter: blur(4px);
           backdrop-filter: blur(4px);
@@ -350,7 +350,7 @@ header nav .navBtn.active span:last-child {
 
 .headerAnimate {
   box-shadow: var(--BigShadow);
-  padding: 5px;
+  padding: 0 5px;
   background-color: var(--whiteColor);
 }
 
@@ -367,7 +367,7 @@ header nav .navBtn.active span:last-child {
   border-radius: 8px;
   margin-bottom: 50px;
   color: var(--whiteColor);
-  gap: 12px;
+  gap: 16px;
 }
 .mainSection h1 {
   font-weight: bold;
@@ -395,6 +395,68 @@ header nav .navBtn.active span:last-child {
   height: 200px;
   border-radius: 100%;
   transform: translateX(-50%);
+}
+
+.mainAtropos {
+  position: relative;
+}
+.mainAtropos .atropos-inner {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  height: 490px;
+  border-radius: 8px;
+  margin-bottom: 50px;
+  color: var(--whiteColor);
+  gap: 16px;
+}
+.mainAtropos .atropos-inner h1 {
+  font-weight: bold;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 38px !important;
+}
+@media (max-width: 768px) {
+  .mainAtropos .atropos-inner h1 {
+    font-size: 24px !important;
+  }
+}
+.mainAtropos .atropos-inner h5 {
+  font-weight: normal;
+}
+.mainAtropos .atropos-inner .logo {
+  height: 50px;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.mainAtropos .atropos-inner .bgImage {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+}
+.mainAtropos .atropos-inner .bgImage::before {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 0%;
+  z-index: 1;
+  background-color: rgba(31, 31, 31, 0.5647058824);
+  width: 100%;
+  height: 100%;
+}
+.mainAtropos .atropos-inner .bgImage img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 footer .copyRight {

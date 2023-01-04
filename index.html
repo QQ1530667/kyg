@@ -13,6 +13,8 @@
   <link rel="icon" type="image/x-icon" href="img/logo.svg" />
   <!-- aos -->
   <link rel="stylesheet" href="css/aos.css" />
+  <!-- atropos -->
+  <link rel="stylesheet" href="css/atropos.css">
   <!-- odometer -->
   <link rel="stylesheet" href="css/odometer.min.css" />
   <!-- Custom style  -->
@@ -31,7 +33,7 @@
       <div class="navMenu">
         <a class="navLink" href="index.html"> الرئيسية </a>
         <a class="navLink" href="#!"> من نحن </a>
-        <a class="navLink" href="#!"> تواصل معنا </a>
+        <a class="navLink btn" href="#!"> تواصل معنا </a>
       </div>
       <!-- toggle btn -->
       <div class="navBtn">
@@ -47,7 +49,7 @@
   <!--(((((((((((((((((((((((()))))))))))))))))))))))-->
   <content>
     <!-- main section -->
-    <section class="mainSection" style="background: linear-gradient(-45deg, #1f1f1f75, #1f1f1faf), url(img/main.webp)">
+    <!-- <section class="mainSection" style="background: linear-gradient(-45deg, #1f1f1f75, #1f1f1faf), url(img/main.webp)">
       <h1 data-aos="fade-down"> شركة نيسان وكب لصيانة السيارات </h1>
       <h5 data-aos="fade-up" data-aos-delay="500"> أفضل مركز متخصص في صيانة سيارات نيسان </h5>
       <a href="#!" class="btn">
@@ -123,9 +125,28 @@
           </g>
         </svg>
       </a>
+    </section> -->
 
+    <div class="atropos mainAtropos">
+      <div class="atropos-scale">
+        <div class="atropos-rotate">
+          <div class="atropos-inner">
+            <div class="bgImage">
+              <img data-atropos-offset="4" src="img/main.webp">
+            </div>
+            <!-- <img data-atropos-offset="3" src="img/bg1.svg">
+            <img data-atropos-offset="6" src="img/bg2.svg">
+            <img data-atropos-offset="8" src="img/bg3.svg"> -->
+            <h1 data-atropos-offset="5" data-aos="fade-up" data-aos-delay="300"> شركة نيسان وكب لصيانة السيارات </h1>
+            <h5 data-atropos-offset="5" data-aos="fade-up" data-aos-delay="500"> أفضل مركز متخصص في صيانة سيارات نيسان
+            </h5>
+            <img class="logo" data-atropos-offset="5" src="img/logow.svg" data-aos="fade-up" data-aos-delay="700">
 
-    </section>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </content>
   <!--(((((((((((((((((((((((()))))))))))))))))))))))-->
   <!--((((((((((((((((( / content )))))))))))))))))))-->
@@ -298,16 +319,36 @@
   <!--////////////////////////////////////////////////////////////////////////////////-->
   <!--////////////////////////////////////////////////////////////////////////////////-->
   <!--////////////////////////////////////////////////////////////////////////////////-->
-  <!-- jquery  -->
+  <!-- jquery -->
   <script src="js/jquery.min.js"></script>
-  <!-- apper  -->
+  <!-- apper -->
   <script src="js/jquery.appear.js"></script>
+  <!-- atropos -->
+  <script src="js/atropos.min.js"></script>
   <!-- animation on scroll -->
   <script src="js/aos.js"></script>
   <!-- odometer counterUp  -->
   <script src="js/odometer.min.js"></script>
   <!-- custom -->
   <script src="js/custom.js"></script>
+
+  <script>
+    // 3D Card
+    const myAtropos = Atropos({
+      el: '.atropos',
+      activeOffset: 40,
+      shadowScale: 1.05,
+      rotateXMax: 25,
+      rotateYMax: 25,
+      shadow: true,
+      shadowOffset: 50,
+      shadowScale: .9,
+      highlight: true,
+      onEnter() { },
+      onLeave() { },
+      onRotate(x, y) { }
+    });
+  </script>
 </body>
 
 </html>

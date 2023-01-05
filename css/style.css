@@ -361,6 +361,11 @@ header nav .navBtn.active span:last-child {
   position: relative;
   height: 500px;
 }
+@media (max-width: 768px) {
+  .mainAtropos {
+    height: 400px;
+  }
+}
 .mainAtropos .atropos-inner {
   position: relative;
   display: flex;

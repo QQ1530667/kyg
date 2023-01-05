@@ -324,6 +324,10 @@ header {
 .mainAtropos {
   position: relative;
   height: 500px;
+
+  @media (max-width: 768px) {
+    height: 400px;
+  }
   .atropos-inner {
     position: relative;
     display: flex;

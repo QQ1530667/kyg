@@ -371,12 +371,6 @@ footer .support .links a i {
   font-size: 24px;
   color: var(--whiteColor);
 }
-footer .support .links a.whatsapp {
-  background-color: #25d366;
-}
-footer .support .links a.call {
-  background-color: #34b7f1;
-}
 
 .btn {
   padding: 12px 32px;

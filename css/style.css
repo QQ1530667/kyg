@@ -9,7 +9,7 @@
   --textColor: #777777;
   --transition: all 0.3s ease-in-out;
   --shadow: 0px 2px 4px #c1c1c1;
-  --BigShadow: 0px 4px 24px #c1c1c1;
+  --BigShadow: 0 16px 32px 0 #071c1f1a;
   --headerBackgroundColor: var(--whiteColor);
 }
 
@@ -423,7 +423,134 @@ header nav .navBtn.active span:last-child {
   padding: 30px 0;
 }
 .services .title {
-  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.services .title .side {
+  flex: 1;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  flex-direction: column;
+  text-align: end;
+}
+.services .title .side h6 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.services .title .side h6::after {
+  content: "//";
+  color: var(--mainColor);
+}
+.services .title .side h6::before {
+  content: "//";
+  color: var(--mainColor);
+}
+.services .title .side p {
+  max-width: 300px;
+}
+.services .title .side h1 {
+  font-size: 32px;
+}
+@media (max-width: 768px) {
+  .services .title .side h1 {
+    font-size: 24px;
+  }
+}
+.services .title .side h1::after {
+  content: "";
+  background-color: var(--mainColor);
+  width: 8px;
+  height: 8px;
+  display: inline-block;
+  border-radius: 4px;
+}
+.services .title .side:nth-child(3) {
+  align-items: flex-start;
+  text-align: start;
+}
+.services .title .distance {
+  width: 2px;
+  background-color: var(--mainColor30);
+  display: flex;
+}
+.services .ourServices {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 100px 0 50px;
+}
+.services .ourServices .col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  min-width: 300px;
+}
+.services .ourServices .col .service {
+  flex: 1;
+  display: flex;
+  flex-direction: row-reverse;
+  text-align: end;
+  gap: 20px;
+  border: 2px solid var(--bodyColor);
+  padding: 12px;
+  padding-left: 20px;
+  position: relative;
+  transition: var(--transition);
+}
+.services .ourServices .col .service::before {
+  content: "";
+  width: 6px;
+  height: 0%;
+  background-color: var(--mainColor);
+  position: absolute;
+  left: -1px;
+  top: 50%;
+  transition: var(--transition);
+  transform: translateY(-50%);
+}
+.services .ourServices .col .service .icon {
+  display: flex;
+  align-items: center;
+}
+.services .ourServices .col .service .icon svg {
+  width: 64px;
+  height: 64px;
+  stroke: #dc3b43;
+  fill: #dc3b43;
+}
+.services .ourServices .col .service .data {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+}
+.services .ourServices .col .service .data p {
+  color: var(--textColor);
+}
+.services .ourServices .col .service:hover {
+  box-shadow: var(--BigShadow);
+}
+.services .ourServices .col .service:hover::before {
+  height: 80%;
+}
+.services .ourServices .col .carImg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.services .ourServices .col:nth-child(3) .service {
+  flex-direction: row !important;
+  text-align: start !important;
+  padding-left: 12px;
+  padding-right: 20px;
+}
+.services .ourServices .col:nth-child(3) .service::before {
+  left: unset;
+  right: -1px;
 }
 
 .references .swiper-slide {
@@ -699,6 +826,11 @@ footer {
   padding-top: 80px;
   padding-bottom: 30px;
   margin-top: 50px;
+}
+@media (max-width: 768px) {
+  footer {
+    margin-top: 20px;
+  }
 }
 footer .container {
   margin: 0px auto;

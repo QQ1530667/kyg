@@ -9,7 +9,7 @@
   --textColor: #777777;
   --transition: all 0.3s ease-in-out;
   --shadow: 0px 2px 4px #c1c1c1;
-  --BigShadow: 0px 4px 24px #c1c1c1;
+  --BigShadow: 0 16px 32px 0 #071c1f1a;
   --headerBackgroundColor: var(--whiteColor);
 }
 @font-face {
@@ -382,7 +382,134 @@ header {
 .services {
   padding: 30px 0;
   .title {
-    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    .side {
+      flex: 1;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      flex-direction: column;
+      text-align: end;
+      h6 {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        &::after {
+          content: "//";
+          color: var(--mainColor);
+        }
+        &::before {
+          content: "//";
+          color: var(--mainColor);
+        }
+      }
+      p {
+        max-width: 300px;
+      }
+      h1 {
+        font-size: 32px;
+        @media (max-width: 768px) {
+          font-size: 24px;
+        }
+        &::after {
+          content: "";
+          background-color: var(--mainColor);
+          width: 8px;
+          height: 8px;
+          display: inline-block;
+          border-radius: 4px;
+        }
+      }
+      &:nth-child(3) {
+        align-items: flex-start;
+        text-align: start;
+      }
+    }
+    .distance {
+      width: 2px;
+      background-color: var(--mainColor30);
+      display: flex;
+    }
+  }
+  .ourServices {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 100px 0 50px;
+    .col {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      min-width: 300px;
+      .service {
+        flex: 1;
+        display: flex;
+        flex-direction: row-reverse;
+        text-align: end;
+        gap: 20px;
+        border: 2px solid var(--bodyColor);
+        padding: 12px;
+        padding-left: 20px;
+        position: relative;
+        transition: var(--transition);
+        &::before {
+          content: "";
+          width: 6px;
+          height: 0%;
+          background-color: var(--mainColor);
+          position: absolute;
+          left: -1px;
+          top: 50%;
+          transition: var(--transition);
+          transform: translateY(-50%);
+        }
+        .icon {
+          display: flex;
+          align-items: center;
+          svg {
+            width: 64px;
+            height: 64px;
+            stroke: #dc3b43;
+            fill: #dc3b43;
+          }
+        }
+        .data {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          gap: 8px;
+          p {
+            color: var(--textColor);
+          }
+        }
+        &:hover{
+          box-shadow: var(--BigShadow);
+          &::before {
+            height: 80%;
+          }
+        }
+      }
+      .carImg {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      &:nth-child(3) {
+        .service {
+          flex-direction: row !important;
+          text-align: start !important;
+          padding-left: 12px;
+          padding-right: 20px;
+          &::before {
+            left: unset;
+            right: -1px;
+          }
+        }
+      }
+    }
   }
 }
 .references {
@@ -623,6 +750,9 @@ footer {
   padding-top: 80px;
   padding-bottom: 30px;
   margin-top: 50px;
+  @media (max-width: 768px) {
+    margin-top: 20px;
+  }
   .container {
     margin: 0px auto;
     max-width: 640px;

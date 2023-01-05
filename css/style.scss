@@ -6,7 +6,7 @@
   --whiteColor: #ffffff;
   --blackColor: #1f1f1f;
   --bodyColor: #f3f3f9;
-  --textColor: #777777;
+  --textColor: #898989;
   --transition: all 0.3s ease-in-out;
   --shadow: 0px 2px 4px #c1c1c1;
   --BigShadow: 0 16px 32px 0 #071c1f1a;
@@ -385,6 +385,8 @@ header {
     display: flex;
     flex-wrap: wrap;
     gap: 16px;
+    padding: 12px 12px;
+
     .side {
       flex: 1;
       display: flex;
@@ -459,7 +461,7 @@ header {
           content: "";
           width: 6px;
           height: 0%;
-          background-color: var(--mainColor);
+          background-color: #f6353f;
           position: absolute;
           left: -1px;
           top: 50%;
@@ -472,8 +474,8 @@ header {
           svg {
             width: 64px;
             height: 64px;
-            stroke: #dc3b43;
-            fill: #dc3b43;
+            stroke: #f6353f;
+            fill: #f6353f;
           }
         }
         .data {
@@ -484,8 +486,11 @@ header {
           p {
             color: var(--textColor);
           }
+          h4 {
+            color: #3c3c3c;
+          }
         }
-        &:hover{
+        &:hover {
           box-shadow: var(--BigShadow);
           &::before {
             height: 80%;
@@ -498,7 +503,7 @@ header {
         justify-content: center;
         max-height: 500px;
         margin: auto;
-        img{
+        img {
           width: 100%;
           height: 100%;
           object-fit: contain;
@@ -506,9 +511,20 @@ header {
         @media (max-width: 768px) {
           max-height: 300px;
         }
-        
       }
       &:nth-child(3) {
+        .service {
+          flex-direction: row !important;
+          text-align: start !important;
+          padding-left: 12px;
+          padding-right: 20px;
+          &::before {
+            left: unset;
+            right: -1px;
+          }
+        }
+      }
+      @media (max-width: 768px) {
         .service {
           flex-direction: row !important;
           text-align: start !important;

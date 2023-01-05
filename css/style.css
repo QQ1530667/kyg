@@ -6,7 +6,7 @@
   --whiteColor: #ffffff;
   --blackColor: #1f1f1f;
   --bodyColor: #f3f3f9;
-  --textColor: #777777;
+  --textColor: #898989;
   --transition: all 0.3s ease-in-out;
   --shadow: 0px 2px 4px #c1c1c1;
   --BigShadow: 0 16px 32px 0 #071c1f1a;
@@ -426,6 +426,7 @@ header nav .navBtn.active span:last-child {
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
+  padding: 12px 12px;
 }
 .services .title .side {
   flex: 1;
@@ -505,7 +506,7 @@ header nav .navBtn.active span:last-child {
   content: "";
   width: 6px;
   height: 0%;
-  background-color: var(--mainColor);
+  background-color: #f6353f;
   position: absolute;
   left: -1px;
   top: 50%;
@@ -519,8 +520,8 @@ header nav .navBtn.active span:last-child {
 .services .ourServices .col .service .icon svg {
   width: 64px;
   height: 64px;
-  stroke: #dc3b43;
-  fill: #dc3b43;
+  stroke: #f6353f;
+  fill: #f6353f;
 }
 .services .ourServices .col .service .data {
   display: flex;
@@ -530,6 +531,9 @@ header nav .navBtn.active span:last-child {
 }
 .services .ourServices .col .service .data p {
   color: var(--textColor);
+}
+.services .ourServices .col .service .data h4 {
+  color: #3c3c3c;
 }
 .services .ourServices .col .service:hover {
   box-shadow: var(--BigShadow);
@@ -564,6 +568,18 @@ header nav .navBtn.active span:last-child {
 .services .ourServices .col:nth-child(3) .service::before {
   left: unset;
   right: -1px;
+}
+@media (max-width: 768px) {
+  .services .ourServices .col .service {
+    flex-direction: row !important;
+    text-align: start !important;
+    padding-left: 12px;
+    padding-right: 20px;
+  }
+  .services .ourServices .col .service::before {
+    left: unset;
+    right: -1px;
+  }
 }
 
 .references .swiper-slide {

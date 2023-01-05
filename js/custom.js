@@ -47,7 +47,7 @@ $(document).ready(function () {
 // ////////////////////////////////////////
 $(document).ready(function () {
   //spinner
-  $(".loader ").fadeOut("slow");
+  $(".spinner").fadeOut("slow");
   // odometer
   $(".odometer").appear(function (e) {
     var odo = $(".odometer");

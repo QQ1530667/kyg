@@ -846,7 +846,6 @@ footer {
   display: block;
   width: 100%;
   transition: 0.3s ease-in-out;
-  color: var(--textColor);
   overflow: hidden;
   text-align: center;
   padding-top: 80px;
@@ -976,7 +975,7 @@ footer .quickLinks {
 footer .quickLinks a {
   padding: 8px;
   display: inline-block;
-  color: var(--textColor);
+  color: #777;
 }
 footer .quickLinks a:hover {
   color: var(--mainColor);

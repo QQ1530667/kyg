@@ -982,9 +982,10 @@ footer {
   display: flex;
   gap: 16px;
   flex-wrap: wrap;
+
   .col {
     flex: 1;
-    min-width: 250px;
+    min-width: 300px;
     padding: 10px;
     position: relative;
   }
@@ -994,6 +995,10 @@ footer {
       width: 100%;
       object-fit: cover;
       border-radius: 8px;
+      @media (max-width:768px) {
+        height: 450px;
+
+      }
     }
   }
   .experience {
@@ -1011,25 +1016,46 @@ footer {
     border-radius: 8px;
     flex-direction: column;
     gap: 8px;
-    box-shadow: -8px 8px 0 0px  #1f1f1f; 
-    span{
+    box-shadow: -8px 8px 0 0px #1f1f1f;
+    span {
       font-weight: bold;
       font-size: 40px;
     }
   }
-  .title{
+  .title {
     flex-direction: column-reverse;
-    .side{
+    .side {
       text-align: start !important;
       align-items: flex-start !important;
-      p{
+      p {
         max-width: unset;
       }
     }
-    .distance{
+    .distance {
       width: unset;
       height: 2px;
     }
+  }
+  ul {
+    padding: 10px;
+    margin: 0;
+    list-style: decimal;
+
+    .special {
+      padding: 8px;
+      display: flex;
+      flex-direction: column;
+      color: #777;
+      span{
+        color: var(--mainColor);
+        font-weight: bold ;
+
+      }
+    }
+  }
+  .moreInfo {
+    font-style: italic;
+    color: #777;
   }
 }
 // //////////////////////////////////////////==================

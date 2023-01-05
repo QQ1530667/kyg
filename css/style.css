@@ -1069,7 +1069,7 @@ footer .support .links a i {
 }
 .about .col {
   flex: 1;
-  min-width: 250px;
+  min-width: 300px;
   padding: 10px;
   position: relative;
 }
@@ -1079,6 +1079,11 @@ footer .support .links a i {
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 8px;
+}
+@media (max-width: 768px) {
+  .about .topSlider img {
+    height: 450px;
+  }
 }
 .about .experience {
   padding: 30px;
@@ -1114,6 +1119,25 @@ footer .support .links a i {
 .about .title .distance {
   width: unset;
   height: 2px;
+}
+.about ul {
+  padding: 10px;
+  margin: 0;
+  list-style: decimal;
+}
+.about ul .special {
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  color: #777;
+}
+.about ul .special span {
+  color: var(--mainColor);
+  font-weight: bold;
+}
+.about .moreInfo {
+  font-style: italic;
+  color: #777;
 }
 
 /* PC device :992px. */

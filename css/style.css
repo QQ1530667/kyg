@@ -497,8 +497,7 @@ header nav .navBtn.active span:last-child {
   text-align: end;
   gap: 20px;
   border: 2px solid var(--bodyColor);
-  padding: 12px;
-  padding-left: 20px;
+  padding: 24px;
   position: relative;
   transition: var(--transition);
 }
@@ -532,7 +531,7 @@ header nav .navBtn.active span:last-child {
 .services .ourServices .col .service .data p {
   color: var(--textColor);
 }
-.services .ourServices .col .service .data h4 {
+.services .ourServices .col .service .data h5 {
   color: #3c3c3c;
 }
 .services .ourServices .col .service:hover {
@@ -573,8 +572,6 @@ header nav .navBtn.active span:last-child {
   .services .ourServices .col .service {
     flex-direction: row !important;
     text-align: start !important;
-    padding-left: 12px;
-    padding-right: 20px;
   }
   .services .ourServices .col .service::before {
     left: unset;

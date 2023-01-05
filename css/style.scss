@@ -453,8 +453,8 @@ header {
         text-align: end;
         gap: 20px;
         border: 2px solid var(--bodyColor);
-        padding: 12px;
-        padding-left: 20px;
+        padding: 24px;
+        
         position: relative;
         transition: var(--transition);
         &::before {
@@ -486,7 +486,7 @@ header {
           p {
             color: var(--textColor);
           }
-          h4 {
+          h5 {
             color: #3c3c3c;
           }
         }
@@ -528,8 +528,7 @@ header {
         .service {
           flex-direction: row !important;
           text-align: start !important;
-          padding-left: 12px;
-          padding-right: 20px;
+          
           &::before {
             left: unset;
             right: -1px;

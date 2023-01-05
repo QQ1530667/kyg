@@ -901,24 +901,15 @@ footer .logo img {
     height: 70px;
   }
 }
-footer .links {
-  text-align: center;
-  padding: 50px 0 30px;
+footer .quickLinks {
+  margin: auto;
 }
-footer .links ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-footer .links ul li {
+footer .quickLinks a {
+  padding: 8px;
   display: inline-block;
-  padding: 10px;
+  color: #777;
 }
-footer .links ul li a {
-  color: var(--blackColor);
-  transition: var(--transition);
-}
-footer .links ul li a:hover {
+footer .quickLinks a:hover {
   color: var(--mainColor);
 }
 footer .social {
@@ -969,16 +960,22 @@ footer .top {
   gap: 16px;
   flex-wrap: wrap;
 }
-footer .quickLinks {
-  margin: auto;
+footer .copyR {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
 }
-footer .quickLinks a {
-  padding: 8px;
-  display: inline-block;
-  color: #777;
+footer .copyR .company {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
 }
-footer .quickLinks a:hover {
-  color: var(--mainColor);
+footer .copyR img {
+  height: 20px;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 footer .support {
   position: fixed;

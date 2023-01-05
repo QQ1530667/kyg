@@ -454,7 +454,7 @@ header {
         gap: 20px;
         border: 2px solid var(--bodyColor);
         padding: 24px;
-        
+
         position: relative;
         transition: var(--transition);
         &::before {
@@ -528,7 +528,7 @@ header {
         .service {
           flex-direction: row !important;
           text-align: start !important;
-          
+
           &::before {
             left: unset;
             right: -1px;
@@ -818,23 +818,14 @@ footer {
       }
     }
   }
-  .links {
-    text-align: center;
-    padding: 50px 0 30px;
-    ul {
-      margin: 0;
-      padding: 0;
-      list-style: none;
-      li {
-        display: inline-block;
-        padding: 10px;
-        a {
-          color: var(--blackColor);
-          transition: var(--transition);
-          &:hover {
-            color: var(--mainColor);
-          }
-        }
+  .quickLinks {
+    margin: auto;
+    a {
+      padding: 8px;
+      display: inline-block;
+      color: #777;
+      &:hover {
+        color: var(--mainColor);
       }
     }
   }
@@ -886,15 +877,20 @@ footer {
     gap: 16px;
     flex-wrap: wrap;
   }
-  .quickLinks {
-    margin: auto;
-    a {
-      padding: 8px;
-      display: inline-block;
-      color: #777;
-      &:hover {
-        color: var(--mainColor);
-      }
+  .copyR {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    .company {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+    }
+    img {
+      height: 20px;
+      object-fit: contain;
     }
   }
   .support {

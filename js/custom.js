@@ -32,6 +32,42 @@ $(document).ready(function () {
     onLeave() {},
     onRotate(x, y) {},
   });
+
+  //references  Slider
+  var referencesSlider = new Swiper(".referencesSlider", {
+    spaceBetween: 12,
+    speed: 1000,
+    loop: true,
+    autoplay: {
+      delay: 2000,
+      disableOnInteraction: false,
+    },
+    // slidesPerView: "auto",
+    breakpoints: {
+      0: {
+        slidesPerView: 2,
+      },
+      340: {
+        slidesPerView: 3,
+      },
+      768: {
+        slidesPerView: 4,
+      },
+      991: {
+        slidesPerView: 5,
+      },
+    },
+  });
+  var topSlider = new Swiper(".topSlider", {
+    speed: 1000,
+    loop: true,
+    effect:'fade',
+    autoplay: {
+      delay: 2000,
+      disableOnInteraction: false,
+    },
+  });
+
 });
 // ////////////////////////////////////////
 // ////////////////////////////////////////

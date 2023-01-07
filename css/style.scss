@@ -982,7 +982,6 @@ footer {
   display: flex;
   gap: 16px;
   flex-wrap: wrap;
-
   .col {
     flex: 1;
     min-width: 300px;
@@ -995,9 +994,8 @@ footer {
       width: 100%;
       object-fit: cover;
       border-radius: 8px;
-      @media (max-width:768px) {
+      @media (max-width: 768px) {
         height: 450px;
-
       }
     }
   }
@@ -1040,16 +1038,14 @@ footer {
     padding: 10px;
     margin: 0;
     list-style: decimal;
-
     .special {
       padding: 8px;
       display: flex;
       flex-direction: column;
       color: #777;
-      span{
+      span {
         color: var(--mainColor);
-        font-weight: bold ;
-
+        font-weight: bold;
       }
     }
   }
@@ -1058,6 +1054,125 @@ footer {
     color: #777;
   }
 }
+.worldMap {
+  width: 500px;
+  height: 500px;
+  order: 2;
+  position: relative;
+  .earth {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    height: 80%;
+    margin: -40%;
+    background: #fff url(../img/map.webp) 0 50% repeat-x;
+    background-size: auto 90%;
+    box-shadow: #0000000d 0 50px 60px;
+    border-radius: 100%;
+    overflow: hidden;
+    animation: map linear 90s infinite;
+  }
+  .orbic {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .orbic svg {
+    width: 100%;
+    height: 100%;
+    vertical-align: top;
+  }
+  #orbic_path {
+    fill: none;
+    stroke: rgba(0, 0, 0, 0.1);
+    stroke-linecap: round;
+    stroke-width: 4px;
+    stroke-dasharray: 1 9;
+    animation: orbic linear 2s infinite;
+  }
+  #orbic_dots use {
+    fill: #fff;
+    stroke: rgba(30, 144, 255, 0.25);
+    stroke-width: 4;
+    animation: dots ease 1s infinite alternate;
+  }
+  #orbic_dot1 {
+    transform: translate(50.4%, 29.6%);
+  }
+  #orbic_dot2 {
+    transform: translate(5%, 62.8%);
+    animation-delay: 0.2s !important;
+  }
+  #orbic_dot3 {
+    transform: translate(97%, 41%);
+    animation-delay: 0.3s !important;
+  }
+  #orbic_dot4 {
+    transform: translate(50%, 70.2%);
+    animation-delay: 0.5s !important;
+  }
+  #orbic_dot5 {
+    transform: translate(31.5%, 51.5%);
+    animation-delay: 0.7s !important;
+  }
+  #orbic_user1 {
+    transform: translate(1%, 40%) scale(0.666667);
+  }
+  #orbic_user2 {
+    transform: translate(18%, 64%) scale(0.666667);
+  }
+  #orbic_user3 {
+    transform: translate(39.5%, 31%) scale(0.666667);
+  }
+  #orbic_user4 {
+    transform: translate(69%, 22%) scale(0.666667);
+  }
+  #orbic_user5 {
+    transform: translate(75%, 53%) scale(0.666667);
+  }
+  @keyframes map {
+    100% {
+      background-position: 220% 50%;
+    }
+  }
+  @keyframes orbic {
+    100% {
+      stroke-dashoffset: 10;
+    }
+  }
+  @keyframes dots {
+    100%,
+    80% {
+      stroke: #1e90ff;
+    }
+  }
+  @media only screen and (max-width: 1000px) {
+    width: 100%;
+    order: 2;
+    position: relative;
+    .earth {
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      background-color: transparent;
+      background-size: 100% auto;
+      box-shadow: none;
+      border-radius: 0;
+      animation: none;
+    }
+  }
+  @media (max-width: 600px) {
+    height: 300px;
+  }
+}
+
+
+
 // //////////////////////////////////////////==================
 // //////////////////////////////////////////==================
 // //////////////////////////////////////////==================

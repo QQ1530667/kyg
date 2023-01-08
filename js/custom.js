@@ -18,20 +18,20 @@ $(document).ready(function () {
     $(".links").slideToggle(300);
   });
   // 3D Card
-  const myAtropos = Atropos({
-    el: ".atropos",
-    activeOffset: 40,
-    shadowScale: 1.05,
-    rotateXMax: 25,
-    rotateYMax: 25,
-    shadow: true,
-    shadowOffset: 50,
-    shadowScale: 0.9,
-    highlight: true,
-    onEnter() {},
-    onLeave() {},
-    onRotate(x, y) {},
-  });
+  // const myAtropos = Atropos({
+  //   el: ".atropos",
+  //   activeOffset: 40,
+  //   shadowScale: 1.05,
+  //   rotateXMax: 25,
+  //   rotateYMax: 25,
+  //   shadow: true,
+  //   shadowOffset: 50,
+  //   shadowScale: 0.9,
+  //   highlight: true,
+  //   onEnter() {},
+  //   onLeave() {},
+  //   onRotate(x, y) {},
+  // });
 
   //references  Slider
   var referencesSlider = new Swiper(".referencesSlider", {
@@ -65,6 +65,10 @@ $(document).ready(function () {
     autoplay: {
       delay: 2000,
       disableOnInteraction: false,
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
     },
   });
 

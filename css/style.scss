@@ -318,14 +318,13 @@ header {
   padding: 0 5px;
   background-color: var(--whiteColor);
 }
-
 .mainAtropos {
   position: relative;
   height: 520px;
   width: min(100% - 40px, 1320px);
   margin: 0 auto;
   margin-top: 20px;
-  @media (max-width:576px) {
+  @media (max-width: 576px) {
     width: 100%;
     margin-top: -66px;
     height: 100vh;
@@ -341,7 +340,7 @@ header {
     margin-bottom: 50px;
     color: var(--whiteColor);
     gap: 16px;
-    @media (max-width:576px) {
+    @media (max-width: 576px) {
       border-radius: 0px;
     }
     h1 {
@@ -391,13 +390,12 @@ header {
       }
     }
   }
-  .swiper-pagination-bullet{
+  .swiper-pagination-bullet {
     background-color: var(--whiteColor);
     transition: var(--transition);
     border-radius: 100px;
-
   }
-  .swiper-pagination-bullet-active{
+  .swiper-pagination-bullet-active {
     width: 30px;
   }
 }
@@ -507,7 +505,6 @@ header {
             stroke: #f6353f;
             fill: #f6353f;
           }
-
         }
         .data {
           display: flex;
@@ -1084,7 +1081,6 @@ footer {
   @media (max-width: 768px) {
     padding: 0;
   }
-
   .contact {
     display: flex;
     flex-wrap: wrap;
@@ -1371,9 +1367,8 @@ footer {
       }
     }
   }
-
   .map {
-    padding:0px;
+    padding: 0px;
     border-radius: 24px;
     margin-top: 80px;
     width: 100%;
@@ -1385,7 +1380,6 @@ footer {
     }
   }
 }
-
 // //////////////////////////////////////////==================
 // //////////////////////////////////////////==================
 // //////////////////////////////////////////==================

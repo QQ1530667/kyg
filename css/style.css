@@ -530,8 +530,10 @@ header nav .navBtn.active span:last-child {
   display: flex;
   align-items: center;
 }
+.services .ourServices .col .service .icon img,
 .services .ourServices .col .service .icon svg {
-  width: 64px;
+  display: block;
+  min-width: 64px;
   height: 64px;
   stroke: #f6353f;
   fill: #f6353f;

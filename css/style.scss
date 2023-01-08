@@ -477,12 +477,15 @@ header {
         .icon {
           display: flex;
           align-items: center;
+          img,
           svg {
-            width: 64px;
+            display: block;
+            min-width: 64px;
             height: 64px;
             stroke: #f6353f;
             fill: #f6353f;
           }
+
         }
         .data {
           display: flex;

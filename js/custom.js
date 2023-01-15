@@ -61,17 +61,16 @@ $(document).ready(function () {
   var topSlider = new Swiper(".topSlider", {
     speed: 1000,
     loop: true,
-    effect:'fade',
+    effect: "fade",
     autoplay: {
       delay: 2000,
       disableOnInteraction: false,
     },
     pagination: {
-      el: '.swiper-pagination',
+      el: ".swiper-pagination",
       clickable: true,
     },
   });
-
 });
 // ////////////////////////////////////////
 // ////////////////////////////////////////

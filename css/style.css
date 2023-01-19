@@ -204,16 +204,21 @@ header nav {
 }
 header nav .logo {
   margin: auto 0;
+  display: block;
+  height: 40px;
 }
 header nav .logo img {
-  height: 40px;
+  height: 100%;
   transition: var(--transition);
-  width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
+  -o-object-position: start;
+     object-position: start;
+  -o-object-position: right;
+     object-position: right;
 }
 @media (max-width: 576px) {
-  header nav .logo img {
+  header nav .logo {
     height: 30px;
   }
 }

@@ -127,3 +127,35 @@ $(document).ready(function () {
     return new bootstrap.Tooltip(tooltipTriggerEl);
   });
 });
+
+var carsSwiper = new Swiper(".carsSwiper", {
+  loop: true,
+  spaceBetween: 30,
+  speed: 2000,
+  autoplay: {
+    delay: 2500,
+  },
+  breakpoints: {
+    992: {
+      slidesPerView: 4,
+    },
+    768: {
+      slidesPerView: 3,
+    },
+    350: {
+      slidesPerView: 1,
+    },
+  },
+});
+let proDetailsSwiper = new Swiper(".proDetailsSwiper", {
+  loop: true,
+  speed: 1000,
+  spaceBetween: 30,
+  autoplay: {
+    delay: 4000,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
